@@ -18,4 +18,6 @@ public class Obra {
         return paginas;
     }
 
+    public Obra(){}
+
 }

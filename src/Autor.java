@@ -8,17 +8,17 @@ public class Autor {
         this.listaObras=listaObras;
     }
 
-    public void obraMesLlarga(Obra[]listaObras){
+    public Obra obraMesLlarga(Obra[]listaObras){
         int obraMasLarga=0;
+        Obra obra=new Obra();
         String tituloObra = "";
         for(int i=0;i< listaObras.length;i++) {
-            int obra = listaObras[i].getPaginas();
-            if (obra > obraMasLarga) {
-                obraMasLarga = obra;
-                tituloObra=listaObras[i].getTitol();
+            if (listaObras[i].getPaginas() > obraMasLarga) {
+                obraMasLarga = listaObras[i].getPaginas();
+                obra=listaObras[i];
             }
         }
-        System.out.println("La obra mas larga es"+tituloObra);
+        return obra;
     }
 
 
